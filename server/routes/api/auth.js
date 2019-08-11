@@ -37,7 +37,7 @@ router.post("/login", passport.authenticate("local", {
 //Log out logic
 router.get("/logout",(req,res)=>{
     req.logOut()
-    req.flash("success","Logged you out")
+    req.send("success","Logged you out")
     res.redirect("/hostels")
 })
 
